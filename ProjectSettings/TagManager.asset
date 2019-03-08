@@ -13,8 +13,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Player
+  - Elements
   - 
   - 
   - 
@@ -40,4 +40,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Shadow
+    uniqueID: 913992271
+    locked: 0
+  - name: Texture
+    uniqueID: 2690313219
+    locked: 0
+  - name: Element
+    uniqueID: 2956590945
+    locked: 0
+  - name: Effects
+    uniqueID: 2208880599
     locked: 0
