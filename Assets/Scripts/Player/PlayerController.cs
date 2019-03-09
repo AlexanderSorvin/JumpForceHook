@@ -291,6 +291,7 @@ public class PlayerController : MonoBehaviour
 
             lr.SetPosition(0, rb.position);
             lr.SetPosition(1, rigidbody.position);
+            dj.connectedBody = rigidbody;
 
             yield return new WaitForFixedUpdate();
         }
@@ -299,7 +300,8 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -MaximumSpeed, MaximumSpeed));
+        rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x, -MaximumSpeed, MaximumSpeed), 
+            Mathf.Clamp(rb.velocity.y, -MaximumSpeed, MaximumSpeed));
         GameController.PlayerPosition?.Invoke(rb);
     }
 }

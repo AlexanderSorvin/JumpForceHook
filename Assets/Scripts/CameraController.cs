@@ -28,6 +28,7 @@ public class CameraController : MonoBehaviour
         {
             case GameMode.GamePlay:
                 rb.position = startPos;
+                GameController.PlayerPosition -= CameraFinishMove;
                 GameController.PlayerPosition += CameraMove;
                 break;
             case GameMode.GameOver:
@@ -35,6 +36,7 @@ public class CameraController : MonoBehaviour
                 break;
             case GameMode.Finish:
                 GameController.PlayerPosition -= CameraMove;
+                GameController.PlayerPosition += CameraFinishMove;
                 delta = 0.0f;
                 break;
             default:
@@ -42,15 +44,14 @@ public class CameraController : MonoBehaviour
         }
     }
 
-    //void CameraMovetoPlayer(Rigidbody2D player)
-    //{
-    //    startPos = new Vector2(player.position.x, positionY);
-    //    GameController.PlayerPosition -= CameraMovetoPlayer;
-    //}
-
     void CameraMove(Rigidbody2D player)
     {
         if (delta == 0.0f) delta = rb.position.x - player.position.x;
         rb.position += Vector2.right * V * (player.position.x + delta - rb.position.x);
+    }
+
+    void CameraFinishMove(Rigidbody2D player)
+    {
+
     }
 }
