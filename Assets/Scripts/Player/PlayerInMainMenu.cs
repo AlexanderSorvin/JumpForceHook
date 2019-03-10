@@ -57,10 +57,12 @@ public class PlayerInMainMenu : MonoBehaviour
 
     void Start()
     {
+        tr.enabled = false;
         startPosition = rb.position;
         rb.position = startPosition;
         rb.velocity = Vector3.down * 10;
         init = true;
+        tr.enabled = true;
     }
 
     private void OnEnable()

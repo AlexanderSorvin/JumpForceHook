@@ -6,6 +6,7 @@ public class UIManager : MonoBehaviour
 {
     [SerializeField] protected GameObject MainMenu;
     [SerializeField] protected GameObject GameZone;
+    [SerializeField] protected GameObject GameCanvas;
 
     private void Start()
     {
@@ -19,6 +20,7 @@ public class UIManager : MonoBehaviour
             case GameMode.MainMenu:
             case GameMode.FinishMenu:
                 GameZone.SetActive(false);
+                GameCanvas.SetActive(false);
                 MainMenu.SetActive(true);
                 break;
             default:
@@ -29,6 +31,7 @@ public class UIManager : MonoBehaviour
     public void StartGame()
     {
         GameZone.SetActive(true);
+        GameCanvas.SetActive(true);
         MainMenu.SetActive(false);
         GameManager.Instance.Mode = GameMode.GamePlay;
     }

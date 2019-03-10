@@ -44,9 +44,6 @@ TagManager:
   - name: Background
     uniqueID: 3276646561
     locked: 0
-  - name: UI
-    uniqueID: 2896848701
-    locked: 0
   - name: Shadow
     uniqueID: 913992271
     locked: 0
@@ -55,6 +52,9 @@ TagManager:
     locked: 0
   - name: Element
     uniqueID: 2956590945
+    locked: 0
+  - name: UI
+    uniqueID: 2896848701
     locked: 0
   - name: Effects
     uniqueID: 2208880599

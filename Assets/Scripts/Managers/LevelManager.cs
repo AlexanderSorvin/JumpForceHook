@@ -5,10 +5,12 @@ using UnityEngine;
 public class LevelManager : Singleton<LevelManager>
 {
     public HaskeyIntController Level;
+    public delegate void CheckGameFinishPositionHandler(Vector2 pos);
+
+    public static CheckGameFinishPositionHandler CheckGameFinishPosition;
 
     private void Awake()
     {
-        PlayerPrefs.DeleteAll();
         Level = new HaskeyIntController("Level", 1);
         GameManager.ChangeNewMode += ChangeNewMode;
     }

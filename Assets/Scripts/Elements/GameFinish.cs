@@ -18,6 +18,7 @@ public class GameFinish : MonoBehaviour
         {
             case GameMode.GamePlay:
                 GameController.PlayerPosition += FinishCheckEvent;
+                LevelManager.CheckGameFinishPosition?.Invoke(t.position);
                 break;
             case GameMode.Finish:
             case GameMode.GameOver:

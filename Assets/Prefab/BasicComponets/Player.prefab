@@ -394,7 +394,7 @@ DistanceJoint2D:
   serializedVersion: 4
   m_EnableCollision: 0
   m_ConnectedRigidBody: {fileID: 0}
-  m_BreakForce: Infinity
+  m_BreakForce: 9999
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0, y: 0}
@@ -423,13 +423,13 @@ MonoBehaviour:
   - {fileID: 6038159410582443745}
   - {fileID: 8540296726814040247}
   playerImage: {fileID: 1387632129383496224}
-  MaximumSpeed: 15
+  MaximumSpeed: 10
   distanceReduction: 0.1
   startEffectObj: {fileID: 7312146172465180766, guid: c0a345e72b5a6a74db85944409708cca,
     type: 3}
   finishParticleObj: {fileID: 2710512381067689612, guid: 3c4adca64bd799241a7b0c43c25d3eae,
     type: 3}
-  finishTime: 3
+  finishTime: 2
 --- !u!120 &2995266009242384253
 LineRenderer:
   m_ObjectHideFlags: 0

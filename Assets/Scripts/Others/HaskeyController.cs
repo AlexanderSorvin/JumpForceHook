@@ -11,6 +11,11 @@ public class HaskeyIntController
         else parameter = PlayerPrefs.GetInt(HasKey);
     }
 
+    public override string ToString()
+    {
+        return parameter.ToString();
+    }
+
     private readonly string HasKey;
     private int parameter;
 
@@ -18,6 +23,11 @@ public class HaskeyIntController
     {
         PlayerPrefs.SetInt(HasKey, value);
         parameter = value;
+    }
+
+    public int Get()
+    {
+        return parameter;
     }
 
     public static implicit operator int(HaskeyIntController p)
@@ -36,6 +46,11 @@ public class HaskeyFloatController
         else parameter = PlayerPrefs.GetFloat(HasKey);
     }
 
+    public override string ToString()
+    {
+        return parameter.ToString();
+    }
+
     private readonly string HasKey;
     private float parameter;
 
@@ -43,6 +58,11 @@ public class HaskeyFloatController
     {
         PlayerPrefs.SetFloat(HasKey, value);
         parameter = value;
+    }
+
+    public float Get()
+    {
+        return parameter;
     }
 
     public static implicit operator float(HaskeyFloatController p)
@@ -62,6 +82,11 @@ public class HaskeyStringController
         else parameter = PlayerPrefs.GetString(HasKey);
     }
 
+    public override string ToString()
+    {
+        return parameter.ToString();
+    }
+
     private readonly string HasKey;
     private string parameter;
 
@@ -69,6 +94,11 @@ public class HaskeyStringController
     {
         PlayerPrefs.SetString(HasKey, value);
         parameter = value;
+    }
+
+    public string Get()
+    {
+        return parameter;
     }
 
     public static implicit operator string(HaskeyStringController p)
