@@ -6,9 +6,9 @@ using UnityEngine.UI;
 
 public class GameCanvasController : MonoBehaviour
 {
-    [SerializeField] Text currentLevel;
-    [SerializeField] Text nextLevel;
-    [SerializeField] Scrollbar scrollbarLevel;
+    [SerializeField] protected Text currentLevel;
+    [SerializeField] protected Text nextLevel;
+    [SerializeField] protected Scrollbar scrollbarLevel;
 
     float startPosition;
     float finishPosition;

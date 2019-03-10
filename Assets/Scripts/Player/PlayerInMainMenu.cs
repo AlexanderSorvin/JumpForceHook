@@ -16,7 +16,7 @@ public class PlayerInMainMenu : MonoBehaviour
     }
 
     TypePlayerPhase currentPlayerPhase;
-    [SerializeField] GameObject [] playerPhase;
+    [SerializeField] protected GameObject [] playerPhase;
 
     TypePlayerPhase CurrentPlayerPhase
     {
@@ -42,7 +42,7 @@ public class PlayerInMainMenu : MonoBehaviour
     Rigidbody2D rb;
     TrailRenderer tr;
 
-    [SerializeField] Rigidbody2D connectingBody;
+    [SerializeField] protected Rigidbody2D connectingBody;
 
     Vector2 startPosition;
     bool init;
