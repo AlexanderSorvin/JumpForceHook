@@ -170,7 +170,8 @@ public class GameZoneController : MonoBehaviour
             }
             else
             {
-                element.obj.SetActive(false);
+                if (prevElement != null)
+                    prevElement.obj.SetActive(false);
                 prevElement = element;
             }
         }
